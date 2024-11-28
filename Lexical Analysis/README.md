@@ -32,22 +32,3 @@ Save your C++ code in a variable or read it from a file and then run the tokeniz
 The script will print a table of tokens and display a bar chart showing the distribution of token types.
 
 ![Token Distribution](img/Bars.png)
-
-## Contributing
-Feel free to modify this template to better suit your project and include any additional information that might be useful. Happy documenting! 📄😊
-
-## License
-This project is licensed under the MIT License.
-
-## Contact
-For any inquiries, please contact:
-
-- **Name:** OMAR OMRAN
-
-- **Email:** omaromran5678@gmail.com
-
-
-
-
-
-## Made by OMAR OMRAN
