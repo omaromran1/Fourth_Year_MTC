@@ -17,6 +17,33 @@ To use this project, you need to have Python 3.12 installed along with the requi
 pip install matplotlib tabulate
 
 ```
+
+## Usage
+Here's a step-by-step guide on how to use the C++ Tokenizer:
+### 1) Clone the Repository:
+```sh
+git clone https://github.com/omaromran1/Sysytem-Programming.git
+```
+
+### 2) Run the Tokenizer:
+Save your C++ code in a variable or read it from a file and then run the tokenizer script.
+
+### 3)  View Output:
+The script will print a table of tokens and display a bar chart showing the distribution of token types.
+
+## Contributing
 Feel free to modify this template to better suit your project and include any additional information that might be useful. Happy documenting! 📄😊
+
+## License
+This project is licensed under the MIT License.
+
+## Contact
+For any inquiries, please contact:
+Name: OMAR OMRAN
+Email: omaromran5678@gmail.com
+
+
+
+
 
 ## Made by OMAR OMRAN
