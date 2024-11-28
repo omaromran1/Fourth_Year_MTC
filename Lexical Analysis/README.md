@@ -1,16 +1,17 @@
-This script includes:
+# C++ Tokenizer
 
-Keywords: Recognizes basic C++ keywords.
+## Overview
+The **C++ Tokenizer** is a Python-based tool designed to parse and tokenize C++ code, identifying various elements such as keywords, identifiers, operators, and more. This tool also provides a graphical representation of the token distribution using `matplotlib`.
 
-Identifiers: Matches variable and function names.
+## Features
+- **Tokenization:** Breaks down C++ code into meaningful tokens.
+- **Token Types:** Recognizes keywords, identifiers, numbers, operators, and other tokens.
+- **Comments Handling:** Ignores single-line and multi-line comments.
+- **Graphical Representation:** Visualizes token distribution using a bar chart.
+- **Tabular Display:** Displays tokens in a neatly formatted table.
 
-Numbers: Identifies integers and floating-point numbers.
+## Installation
+To use this project, you need to have Python 3.12 installed along with the required libraries. You can install the dependencies using `pip`.
 
-Operators and Delimiters: Matches common operators, assignment, semicolons, braces, and parentheses.
-
-Whitespace: Skips over whitespace.
-
-Unknown: Catches any unrecognized characters for error handling.
-
-This is a basic lexer and can be further expanded to include more keywords, different token types, and better error handling. If you need additional features or have specific requirements, let me know!
-
+```sh
+pip install matplotlib tabulate
