@@ -1,7 +1,7 @@
 # C++ Compiler Design
 
 ## Contributing
-Feel free to modify this template to better suit your project and include any additional information that might be useful. Happy documenting! 📄😊
+Feel free to modify this project and request to modify it 😊
 
 ## License
 This project is licensed under the MIT License.
