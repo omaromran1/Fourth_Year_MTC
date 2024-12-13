@@ -1,0 +1,113 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.22621}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 Non-Functional Requirements for Student Record System (SRS)\par
+Non-functional requirements define the overall qualities and attributes of the system that influence its performance, usability, security, scalability, and reliability. These requirements focus on how the system performs its tasks, rather than what tasks it performs. Below are the non-functional requirements for the Student Record System (SRS).\par
+\par
+1. Performance Requirements\par
+NFR1.1: Response Time\par
+\par
+The system must respond to user requests within 2 seconds for most operations (e.g., loading the dashboard, displaying course details).\par
+For complex operations (e.g., generating reports, course registration during peak periods), the system must complete within 10 seconds.\par
+NFR1.2: Concurrent Users\par
+\par
+The system must support at least 1,000 simultaneous users without performance degradation.\par
+During peak usage periods (e.g., course registration), the system should scale to support up to 10,000 concurrent users.\par
+NFR1.3: Throughput\par
+\par
+The system should handle a transaction rate of at least 200 transactions per second, including student registration, grade updates, and course enrollment.\par
+2. Availability and Reliability\par
+NFR2.1: System Availability\par
+\par
+The system must be available 99.9% of the time, ensuring minimal downtime for maintenance and other system updates. This translates to less than 9 hours of downtime per year.\par
+NFR2.2: Fault Tolerance\par
+\par
+The system must be able to handle failures gracefully without data loss. If a server or database fails, the system must provide fallback mechanisms (e.g., redundant systems or servers) to ensure continued operation.\par
+NFR2.3: Backup and Recovery\par
+\par
+The system must perform daily backups of all critical data (e.g., student records, grades, attendance) and ensure that data can be recovered within 2 hours after any catastrophic failure.\par
+3. Security Requirements\par
+NFR3.1: Authentication and Authorization\par
+\par
+The system must implement strong authentication (e.g., multi-factor authentication) to ensure that only authorized users can access the system.\par
+User roles and permissions must be strictly enforced to prevent unauthorized access to sensitive data (e.g., students cannot access teacher or administrative records).\par
+NFR3.2: Data Encryption\par
+\par
+All sensitive data (e.g., student personal information, grades, login credentials) must be encrypted using strong encryption algorithms (e.g., AES-256) both at rest and in transit (e.g., SSL/TLS for web communication).\par
+NFR3.3: Security Audits\par
+\par
+The system must log all security-related events, including login attempts, data access, and changes to sensitive records, with a retention period of at least 1 year for auditing purposes.\par
+NFR3.4: Data Privacy\par
+\par
+The system must comply with data privacy regulations such as GDPR (General Data Protection Regulation) and FERPA (Family Educational Rights and Privacy Act). Users must have the ability to request deletion of their personal data.\par
+4. Usability Requirements\par
+NFR4.1: User Interface (UI)\par
+\par
+The system must provide an intuitive and user-friendly interface that requires minimal training for students, teachers, and administrators to use effectively.\par
+The UI should be consistent across all pages and devices (desktop, mobile).\par
+NFR4.2: Accessibility\par
+\par
+The system must comply with WCAG 2.1 accessibility standards, ensuring that it is usable by people with disabilities, including compatibility with screen readers and keyboard navigation.\par
+NFR4.3: Language Support\par
+\par
+The system must support at least two languages (e.g., English and one other language) to accommodate diverse user groups, with the ability to add more languages in the future.\par
+5. Scalability\par
+NFR5.1: Horizontal Scalability\par
+\par
+The system must be horizontally scalable, meaning it can add more servers or resources as the number of users grows without significant reconfiguration.\par
+NFR5.2: Database Scalability\par
+\par
+The system must support scalable database solutions that can handle growing amounts of student records and transactional data as the institution expands.\par
+NFR5.3: Load Balancing\par
+\par
+The system should use load balancing mechanisms to distribute user requests efficiently across available servers and avoid server overload.\par
+6. Maintainability\par
+NFR6.1: Code Quality\par
+\par
+The system must be built using clean, modular code that is easy to maintain, extend, and troubleshoot. Code should follow established coding standards and best practices.\par
+NFR6.2: Documentation\par
+\par
+The system must include detailed documentation for both users and developers. User manuals should be provided to guide non-technical users, while technical documentation should assist developers in maintaining and upgrading the system.\par
+NFR6.3: Error Logging and Troubleshooting\par
+\par
+The system should implement a centralized logging mechanism to capture errors, exceptions, and system activity for easy troubleshooting and performance monitoring.\par
+7. Compatibility and Integration\par
+NFR7.1: Browser Compatibility\par
+\par
+The system must be compatible with all major browsers (e.g., Chrome, Firefox, Edge, Safari) and should function correctly on both desktop and mobile versions of these browsers.\par
+NFR7.2: Third-Party Integration\par
+\par
+The system must integrate with third-party systems such as email servers for notifications, payment gateways (if applicable), and academic tools for grades and assignment submissions.\par
+NFR7.3: Data Import and Export\par
+\par
+The system should provide functionality for importing and exporting data in standard formats (e.g., CSV, XML) to facilitate data migration and integration with other institutional systems.\par
+8. Compliance and Legal\par
+NFR8.1: Regulatory Compliance\par
+\par
+The system must comply with relevant local, regional, and international regulations regarding data handling, security, and privacy, such as FERPA (for educational institutions in the U.S.) or GDPR (for institutions in the EU).\par
+NFR8.2: Legal Audit Trail\par
+\par
+The system must maintain a legal audit trail of all data-related actions (e.g., adding, editing, or deleting student records) to ensure compliance with legal and regulatory requirements.\par
+9. Environmental Requirements\par
+NFR9.1: System Resource Utilization\par
+\par
+The system should optimize resource utilization, including memory, CPU, and bandwidth, to ensure efficient operation on available hardware.\par
+NFR9.2: Energy Efficiency\par
+\par
+The system should be energy-efficient, especially if hosted in data centers, reducing environmental impact while maintaining optimal performance.\par
+10. Backup and Disaster Recovery\par
+NFR10.1: Backup Frequency\par
+\par
+Critical data must be backed up daily, and the system should allow for incremental backups at regular intervals throughout the day to minimize data loss in case of failure.\par
+NFR10.2: Disaster Recovery Plan\par
+\par
+A disaster recovery plan should be in place that outlines how to restore data and resume operations within an acceptable time frame (e.g., 4 hours after a catastrophic failure).\par
+Conclusion\par
+These non-functional requirements are crucial for ensuring that the Student Record System (SRS) delivers a high-quality user experience, meets performance and security standards, and can scale as needed. The successful implementation of these requirements will ensure the system is efficient, reliable, and secure, while also being easy to use and maintain. Non-functional requirements focus on the system\rquote s ability to meet expectations regarding performance, reliability, security, and overall user satisfaction.\par
+\par
+\par
+\par
+\par
+\par
+\par
+}
+ 

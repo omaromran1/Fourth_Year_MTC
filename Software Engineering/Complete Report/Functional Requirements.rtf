@@ -1,0 +1,111 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.22621}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 Functional Requirements for Student Record System (SRS)\par
+Functional requirements define the core features and functionalities that the Student Record System (SRS) must support to meet the needs of its users. These requirements are essential for ensuring that the system operates effectively and meets the expectations of stakeholders such as students, teachers, administrators, and other users. Below are the detailed functional requirements for the SRS.\par
+\par
+1. User Authentication and Authorization\par
+FR1.1: Login\par
+\par
+The system must allow users to log in with a unique username and password.\par
+Users must be redirected to their appropriate dashboard upon successful login (students to the student dashboard, teachers to the teacher dashboard, administrators to the admin panel).\par
+FR1.2: Role-Based Access Control\par
+\par
+The system must differentiate users by their roles (Student, Teacher, Administrator) and allow access to functionalities based on these roles.\par
+Each role must have different levels of access to the system, with students having access only to their own records, teachers to their respective class data, and administrators to system-wide configurations.\par
+FR1.3: Password Recovery\par
+\par
+The system must provide a secure mechanism for users to recover their password if forgotten. This could include email verification or answering security questions.\par
+2. Student Information Management\par
+FR2.1: Add Student Records\par
+\par
+The system must allow administrators to add new student records, including personal information (name, contact information, date of birth), and academic details (enrollment year, courses, and grades).\par
+FR2.2: Edit Student Records\par
+\par
+Administrators should be able to edit student records to update personal details or academic information (e.g., changing a student's contact details or updating enrollment status).\par
+FR2.3: View Student Records\par
+\par
+The system must allow students, teachers, and administrators to view student records.\par
+Students should only see their own records, while teachers and administrators should be able to view records for all students in their assigned courses or across the entire institution, depending on their access rights.\par
+FR2.4: Delete Student Records\par
+\par
+Administrators must have the ability to delete student records, with proper safeguards to prevent accidental deletion (e.g., confirmation dialogs).\par
+3. Course Management\par
+FR3.1: Course Registration\par
+\par
+The system must allow students to register for courses based on availability and prerequisites.\par
+The system must display a course catalog, including course names, descriptions, schedules, and instructor information.\par
+FR3.2: Course Enrollment Management\par
+\par
+The system should enable administrators to create, update, and delete courses.\par
+Administrators must assign teachers to courses and manage course schedules.\par
+FR3.3: View Available Courses\par
+\par
+Students must be able to search for and view available courses during the registration period.\par
+FR3.4: Course Enrollment Limits\par
+\par
+The system must track the number of students enrolled in a course and prevent new enrollments once the course reaches its capacity.\par
+4. Grade Management\par
+FR4.1: Grade Entry\par
+Teachers must be able to enter and update grades for assignments, midterms, final exams, and overall course performance.\par
+FR4.2: View Grades\par
+Students must be able to view their grades for each course, including individual assignment scores, exam results, and cumulative grades for the course.\par
+FR4.3: Grade Reporting\par
+Administrators and teachers should be able to generate and export grade reports (e.g., a list of all student grades, average class grade).\par
+FR4.4: Grade Adjustment\par
+Teachers and administrators must be able to adjust grades if needed, with changes being logged for auditing purposes.\par
+5. Attendance Management\par
+FR5.1: Attendance Recording\par
+\par
+Teachers must be able to record student attendance during class sessions, marking students as "Present," "Absent," or "Excused."\par
+FR5.2: View Attendance\par
+\par
+Teachers and administrators must be able to view student attendance records for each class and track trends such as frequent absences.\par
+FR5.3: Attendance Reports\par
+\par
+The system should allow administrators and teachers to generate attendance reports, including overall attendance statistics for each student and the class as a whole.\par
+6. Reporting and Analytics\par
+FR6.1: Generate Student Performance Reports\par
+\par
+The system must allow teachers and administrators to generate detailed reports on student performance, including grades, attendance, and overall progress.\par
+FR6.2: Generate Course Enrollment Reports\par
+\par
+The system should allow administrators to generate reports on course enrollment numbers, course load, and student distribution across departments.\par
+FR6.3: Downloadable Reports\par
+\par
+All reports (grades, attendance, enrollment) must be exportable in common formats such as PDF, CSV, or Excel.\par
+7. Notification System\par
+FR7.1: Notifications for Students\par
+The system must send automatic notifications to students for important events such as new grades, course registration deadlines, or class cancellations.\par
+FR7.2: Notifications for Teachers\par
+Teachers should receive notifications when students submit assignments, when attendance is due to be recorded, or when their course data has been updated.\par
+FR7.3: Notification Preferences\par
+Users must be able to customize their notification preferences, such as opting in or out of email or SMS notifications.\par
+8. Security and Data Privacy\par
+FR8.1: Data Encryption\par
+\par
+The system must ensure that sensitive user data (such as grades, personal information, and login credentials) is stored and transmitted using strong encryption methods (e.g., SSL, AES).\par
+FR8.2: Role-Based Security\par
+\par
+The system must implement role-based security to ensure that only authorized users can access or modify specific data. For example, students cannot access teacher or administrator records, and teachers cannot modify administrative settings.\par
+FR8.3: Audit Trails\par
+\par
+The system must maintain an audit trail of all actions that modify student records (e.g., adding or editing grades, course registrations, etc.), which can be accessed by administrators for review.\par
+FR8.4: Privacy Compliance\par
+\par
+The system must comply with relevant data privacy laws, such as GDPR (General Data Protection Regulation) or FERPA (Family Educational Rights and Privacy Act), ensuring that personal and academic data is handled securely and with appropriate consent.\par
+9. Backup and Recovery\par
+FR9.1: Data Backup\par
+\par
+The system must automatically back up data regularly to prevent data loss in case of system failure or technical issues.\par
+FR9.2: Data Recovery\par
+\par
+The system should provide mechanisms for administrators to restore data from backups in the event of data corruption or loss.\par
+10. System Performance and Scalability\par
+FR10.1: Performance Requirements\par
+The system must handle simultaneous access by thousands of users without significant performance degradation, particularly during peak periods (e.g., course registration times or exam periods).\par
+FR10.2: Scalability\par
+The system must be scalable to accommodate increasing numbers of students, faculty, and courses as the institution grows over time.\par
+Conclusion\par
+These functional requirements serve as the blueprint for the Student Record System (SRS), detailing all the necessary features, workflows, and expectations that the system must fulfill. These functionalities aim to ensure that the system is user-friendly, secure, efficient, and meets the needs of all stakeholders involved in the student management process. The successful implementation of these requirements will support smooth academic operations, accurate record-keeping, and improved user experience for students, teachers, and administrators.\par
+}
+ 
