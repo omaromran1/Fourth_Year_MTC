@@ -8,7 +8,7 @@ os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
 import tensorflow as tf
 
 # Load the model
-model = tf.keras.models.load_model('Traffic_Omar.h5')
+model  = tf.keras.models.load_model(r'..\Sign_V1.1.h5')
 
 # Label Overview
 classes = { 0:'Speed limit (20km/h)',
