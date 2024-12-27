@@ -2,16 +2,11 @@ import os
 import numpy as np
 import cv2
 import matplotlib.pyplot as plt
+import tensorflow as tf
 
 os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
 
-import tensorflow as tf
-# Your code follows
-
-
 model  = tf.keras.models.load_model('../model/traffic_classifier.h5')
-
-
 
 # Load an example image
 image_path = r'../img/ps.png'
