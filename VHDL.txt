@@ -1,0 +1,147 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+entity ArithmeticOperations is
+    Port ( a     : in  STD_LOGIC_VECTOR(7 downto 0);  -- 8-bit input a
+           b     : in  STD_LOGIC_VECTOR(7 downto 0);  -- 8-bit input b
+           result_add_b  : out STD_LOGIC_VECTOR(7 downto 0);  -- result of a + b
+           result_sub_1  : out STD_LOGIC_VECTOR(7 downto 0);  -- result of a - 1
+           result_sub_b  : out STD_LOGIC_VECTOR(7 downto 0);  -- result of a - b
+           result_add_1  : out STD_LOGIC_VECTOR(7 downto 0)   -- result of a + 1
+           );
+end ArithmeticOperations;
+
+architecture Behavioral of ArithmeticOperations is
+begin
+    -- Task 1: a + b
+    result_add_b <= a + b;
+    
+    -- Task 2: a - 1
+    result_sub_1 <= a - "00000001";  -- Subtract 1 from a
+    
+    -- Task 3: a - b
+    result_sub_b <= a - b;
+    
+    -- Task 4: a + 1
+    result_add_1 <= a + "00000001";  -- Add 1 to a
+
+end Behavioral;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+####################
+
+
+
+
+
+
+
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+entity tb_ArithmeticOperations is
+    -- Testbench has no ports
+end tb_ArithmeticOperations;
+
+architecture behavior of tb_ArithmeticOperations is
+    -- Component Declaration for the Unit Under Test (UUT)
+    component ArithmeticOperations
+        Port ( a     : in  STD_LOGIC_VECTOR(7 downto 0);
+               b     : in  STD_LOGIC_VECTOR(7 downto 0);
+               result_add_b  : out STD_LOGIC_VECTOR(7 downto 0);
+               result_sub_1  : out STD_LOGIC_VECTOR(7 downto 0);
+               result_sub_b  : out STD_LOGIC_VECTOR(7 downto 0);
+               result_add_1  : out STD_LOGIC_VECTOR(7 downto 0)
+               );
+    end component;
+
+    -- Signals for the inputs and outputs
+    signal a         : STD_LOGIC_VECTOR(7 downto 0) := (others => '0');
+    signal b         : STD_LOGIC_VECTOR(7 downto 0) := (others => '0');
+    signal result_add_b  : STD_LOGIC_VECTOR(7 downto 0);
+    signal result_sub_1  : STD_LOGIC_VECTOR(7 downto 0);
+    signal result_sub_b  : STD_LOGIC_VECTOR(7 downto 0);
+    signal result_add_1  : STD_LOGIC_VECTOR(7 downto 0);
+
+begin
+    -- Instantiate the Unit Under Test (UUT)
+    uut: ArithmeticOperations
+        Port map (
+            a => a,
+            b => b,
+            result_add_b => result_add_b,
+            result_sub_1 => result_sub_1,
+            result_sub_b => result_sub_b,
+            result_add_1 => result_add_1
+        );
+
+    -- Stimulus process
+    stim_proc: process
+    begin
+        -- Test case 1
+        a <= "00000001";  -- a = 1
+        b <= "00000001";  -- b = 1
+        wait for 10 ns;
+        
+        -- Test case 2
+        a <= "00000010";  -- a = 2
+        b <= "00000001";  -- b = 1
+        wait for 10 ns;
+
+        -- Test case 3
+        a <= "00000011";  -- a = 3
+        b <= "00000010";  -- b = 2
+        wait for 10 ns;
+
+        -- Test case 4
+        a <= "00000100";  -- a = 4
+        b <= "00000001";  -- b = 1
+        wait for 10 ns;
+
+        -- Test case 5 (larger values)
+        a <= "01100101";  -- a = 101
+        b <= "00001111";  -- b = 15
+        wait for 10 ns;
+
+        -- Test case 6 (a = 0)
+        a <= "00000000";  -- a = 0
+        b <= "00000001";  -- b = 1
+        wait for 10 ns;
+
+        -- Test case 7 (negative results in signed values)
+        a <= "10000000";  -- a = -128 (in 2's complement)
+        b <= "00000001";  -- b = 1
+        wait for 10 ns;
+
+        -- Test case 8 (edge case for max value)
+        a <= "11111111";  -- a = 255
+        b <= "00000001";  -- b = 1
+        wait for 10 ns;
+
+        -- End simulation
+        wait;
+    end process;
+
+end behavior;
